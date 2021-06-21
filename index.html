@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Portfolio GRENIER Laura</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Portfolio GRENIER Laura</h1>
+
+        <p>A beautiful homepage soon visible!</p>
+
+        <p>{{ copyright }}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+       const app = new Vue({
+         el: '#app',
+         data: {
+          name: 'GRENIER Laura',
+		 },
+		  computed: {
+            copyright() {
+						const currentYear = new Date().getFullYear()
+
+						return `Copyright Portfolio ${this.name} ${currentYear}`
+			}
+		  }
+       })
+    </script> 
+</body>
+</html>
